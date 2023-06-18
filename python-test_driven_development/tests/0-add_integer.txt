@@ -1,0 +1,78 @@
+# Importing function from the module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+# add two positive integers
+    >>> add_integer(2, 3)
+    5
+
+# add an integer and a negative
+    >>> add_integer(2, -3)
+    -1
+
+# add two positive floats
+    >>> add_integer(2.0, 3.0)
+    5
+
+# add two positive floats
+    >>> add_integer(2.9, 0.2)
+    2
+
+# add two negative floats
+    >>> add_integer(-2.9, -0.2)
+    -2
+
+# add two negative floats
+    >>> add_integer(2.3, -3)
+    -1
+
+# adds a positive integer with an argument
+    >>> add_integer(2)
+    100
+
+
+# If any of its arguments is not an integer or float, it raises a TypeError
+
+# first argument of type str
+    >>> add_integer("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+# second argument of type str
+    >>> add_integer(2, "hello")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+# single argument None
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+# second argument None
+    >>> add_integer(2.3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+# two arguments str
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+# infinity float to integer
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+     
+# second argument infinite float to integer
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+# convert float NaN to integer
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+# second convert float NaN to integer
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
