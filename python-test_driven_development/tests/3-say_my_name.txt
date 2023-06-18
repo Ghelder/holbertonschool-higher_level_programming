@@ -1,0 +1,44 @@
+# Importing function from the module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# prints valid strings
+
+#
+    >>> say_my_name("Daniela", "Núñez")
+    My name is Daniela Núñez
+
+#
+    >>> say_my_name("Allie", "Sherlock")
+    My name is Allie Sherlock
+
+#
+    >>> say_my_name("helder")
+    My name is helder 
+
+# TypeError:
+    if they are not chains
+
+#
+    >>> say_my_name(20, "Lucero")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+#
+    >>> say_my_name("Georgia", ["Marisol", "Sofia", "Karol"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+#
+    >>> say_my_name({"Alice": 12, "James": 19}, 1.0)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+#
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+#
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
