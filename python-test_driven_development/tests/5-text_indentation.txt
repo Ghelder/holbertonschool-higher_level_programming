@@ -1,0 +1,76 @@
+# Importing function from the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+# prints a string
+
+
+#
+    >>> text_indentation("Welcome?")
+    Welcome?
+    <BLANKLINE>
+
+#
+    >>> text_indentation("   The girls.")
+    The girls.
+    <BLANKLINE>
+
+#
+    >>> text_indentation("          ")
+
+#
+    >>> text_indentation("Welcome.   ")
+    Welcome.
+    <BLANKLINE>
+
+#
+    >>> text_indentation("    what is.    this is texting.   ")
+    what is.
+    <BLANKLINE>
+    this is texting.
+    <BLANKLINE>
+
+#
+    >>> text_indentation("that bad, lack of punctuation")
+    that bad, lack of punctuation
+
+#
+    >>> text_indentation("writing test! this goes:\nHere.")
+    writing test! this goes:
+    <BLANKLINE>
+    <BLANKLINE>
+    Here.
+    <BLANKLINE>
+
+#
+    >>> text_indentation("\n\n\n printing new added lines.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    printing new added lines.
+    <BLANKLINE>
+
+#  
+    >>> text_indentation("to sleep \n add new line.")
+    to sleep 
+    add new line.
+    <BLANKLINE>
+
+
+# invalid Text
+
+
+#
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+#
+    >>> text_indentation({"one": 1, "two": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+#
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
