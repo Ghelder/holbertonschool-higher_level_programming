@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """class BaseGeometry based."""
+    """Class BaseGeometry based."""
 
     def area(self):
         """Method instance area.
