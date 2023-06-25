@@ -6,7 +6,7 @@ class Student:
     """Object that defines a student."""
 
     def __init__(self, first_name, last_name, age):
-        """Initializes the data
+        """Initializes the data.
 
         Args:
             first_name (str): The first name of the student.
@@ -34,5 +34,10 @@ class Student:
             return self.__dict__
 
     def reload_from_json(self, json):
-        """Reloads from json"""
+        """Reloads from json.
+
+        Args:
+            json (dict): The dictionary description with simple data structure.
+        """
+
         self.__dict__ = json
