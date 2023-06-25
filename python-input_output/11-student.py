@@ -40,4 +40,4 @@ class Student:
             json (dict): The dictionary description with simple data structure.
         """
 
-        self.__dict__ = json
+        self.__dict__.update(json)
