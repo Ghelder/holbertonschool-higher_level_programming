@@ -7,7 +7,5 @@
     <class '7-base_geometry.BaseGeometry'>
 
 
-# passing second method to the instance
-    >>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-    <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry
-    object at...>>
+# does not return or print
+    >>> bg.integer_validator("valid number", 1)
