@@ -6,6 +6,8 @@
     >>> type(bg)
     <class '7-base_geometry.BaseGeometry'>
 
-# print object class
-    >>> print(bg) # doctest: +ELLIPSIS
-    <7-base_geometry.BaseGeometry object at ...>
+
+# passing parameter None to the class
+    >>> bg = BaseGeometry(None)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry() takes no arguments
