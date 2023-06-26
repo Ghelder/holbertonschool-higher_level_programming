@@ -9,3 +9,9 @@
 
 # does not return or print
     >>> bg.integer_validator("valid number", 1)
+
+
+# TypeError does not allow string in the second parameter
+    >>> bg.integer_validator("invalid number", "number")
+    Traceback (most recent call last):
+    TypeError: invalid number must be an integer
