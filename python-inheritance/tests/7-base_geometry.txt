@@ -19,3 +19,9 @@
 
 # does not return, allows booleans
     >>> bg.integer_validator("another invalid", True)
+
+
+# TypeError does not allow tuple in the second parameter
+    >>> bg.integer_validator("invalid tuple", (1,))
+    Traceback (most recent call last):
+    TypeError: invalid tuple must be an integer
