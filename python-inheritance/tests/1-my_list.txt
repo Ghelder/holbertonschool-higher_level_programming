@@ -67,3 +67,14 @@
     >>> for i in range(20):
     ...     my_list.append(random.randint(0, 100))
     >>> sorted_list = sorted(my_list)
+
+
+# Test if the function correctly sorts and prints a list of strings
+    >>> my_list = MyList()
+    >>> my_list.append("Daniela")
+    >>> my_list.append("Lucero")
+    >>> my_list.append("Milagros")
+    >>> my_list.append("Allie")
+    >>> my_list.append("Georgia")
+    >>> my_list.print_sorted()
+    ['Allie', 'Daniela', 'Georgia', 'Lucero', 'Milagros']
