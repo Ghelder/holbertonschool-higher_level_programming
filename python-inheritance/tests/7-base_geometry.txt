@@ -21,7 +21,7 @@
     >>> bg.integer_validator("another invalid", True)
 
 
-# passing in the first parameter a dictionary and in the second a tuple
-    >>> bg.integer_validator({"d": 20}, (1, 2))
+# passing negative second paramer
+    >>> bg.integer_validator("invalid int", -5)
     Traceback (most recent call last):
-    TypeError: {'d': 20} must be an integer
+    ValueError: invalid int must be greater than 0
