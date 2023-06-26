@@ -78,3 +78,9 @@
     >>> my_list.append("Georgia")
     >>> my_list.print_sorted()
     ['Allie', 'Daniela', 'Georgia', 'Lucero', 'Milagros']
+
+
+# Test if the function correctly sorts and prints a None
+    >>> my_list = MyList(None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
