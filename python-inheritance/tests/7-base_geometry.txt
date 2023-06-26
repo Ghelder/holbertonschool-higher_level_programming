@@ -7,7 +7,8 @@
     <class '7-base_geometry.BaseGeometry'>
 
 
-# passing parameter None to the class
-    >>> bg = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: BaseGeometry() takes no arguments
+# passing method to the instance
+    >>> bg = BaseGeometry()
+    >>> print(bg.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    <bound method BaseGeometry.area of <7-base_geometry.BaseGeometry
+    object at...>>
