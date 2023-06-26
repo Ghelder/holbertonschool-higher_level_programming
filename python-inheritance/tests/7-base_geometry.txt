@@ -21,7 +21,7 @@
     >>> bg.integer_validator("another invalid", True)
 
 
-# passing negative second paramer
-    >>> bg.integer_validator("invalid int", -5)
+# passing without parameters
+    >>> bg.integer_validator()
     Traceback (most recent call last):
-    ValueError: invalid int must be greater than 0
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
