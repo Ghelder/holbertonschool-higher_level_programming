@@ -147,3 +147,25 @@ class Rectangle(Base):
             f"[Rectangle] ({self.id}) {self.x}/{self.y}"
             f" - {self.width}/{self.height}"
         )
+
+    def update(self, *args):
+        """Update the attributes of the object based on the given arguments.
+
+        Args:
+            *args: Variable-length argument list containing the values to
+            update the attributes.
+                The order of the arguments should be: id, width, height, x, y.
+
+        Returns:
+            None
+        """
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
