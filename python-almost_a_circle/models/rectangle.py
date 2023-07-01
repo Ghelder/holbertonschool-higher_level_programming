@@ -148,24 +148,19 @@ class Rectangle(Base):
             f" - {self.width}/{self.height}"
         )
 
-    def update(self, *args):
-        """Update the attributes of the object based on the given arguments.
+    def update(self, *args, **kwargs):
+        """Updates the width and height of the object.
 
         Args:
-            *args: Variable-length argument list containing the values to
-            update the attributes.
-                The order of the arguments should be: id, width, height, x, y.
+            *args: Variable length argument list. The first argument is the new
+            width, and the second argument is the new height.
 
-        Returns:
-            None
+            **kwargs: Arbitrary keyword arguments. Each key-value pair
+            represents an attribute to update.
         """
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+        if args:
+            self.width = args[0]
+            self.height = args[1]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
