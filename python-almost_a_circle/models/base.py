@@ -68,6 +68,7 @@ class Base:
             with open(filename, "r") as file:
                 json_string = file.read()
                 instance_list = cls.from_json_string(json_string)
-                return [cls.create(**instance_data) for instance_data in instance_list]
+                return [cls.create(**instance_data) for instance_data in
+                        instance_list]
         except FileNotFoundError:
             return []
